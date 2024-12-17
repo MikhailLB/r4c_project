@@ -6,12 +6,3 @@ class Robot(models.Model):
     model = models.CharField(max_length=2, blank=False, null=False)
     version = models.CharField(max_length=2, blank=False, null=False)
     created = models.DateTimeField(blank=False, null=False)
-
-    class Meta:
-        indexes = [
-            models.Index(fields=['serial']),
-            models.Index(fields=['created']),
-        ]
-
-    def __str__(self):
-        return f'{self.created} {self.serial}'
