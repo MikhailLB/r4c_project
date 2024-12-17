@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from django.db.models import Count
 
 from robots.models import Robot
-from robots.validators import robot_serializer
+from robots.serializers import robot_serializer
 
 
 def create_robot(data):
